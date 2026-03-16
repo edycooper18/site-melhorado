@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TaskFlow Pro</h1>
+        </header>
+        
+        <section class="input-section">
+            <h2>Adicionar Tarefa</h2>
+            <form id="taskForm">
+                <input type="text" id="title" placeholder="Título da tarefa" required>
+                <select id="priority">
+                    <option value="1">Baixa</option>
+                    <option value="3" selected>Média</option>
+                    <option value="5">Alta</option>
+                </select>
+                <input type="date" id="deadline" required>
+                <input type="number" id="estHours" placeholder="Horas estimadas" min="0.5" step="0.5" required>
+                <input type="number" id="freeHours" placeholder="Horas disponíveis hoje" min="1" step="0.5" value="8">
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+        
+        <section class="dashboard">
+            <div class="stats">
+                <span id="taskCount">0 tarefas</span>
+                <span id="topPriority">Prioridade total: 0</span>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+        
+        <section class="demo">
+            <h2>Bubble Sort Demo</h2>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <input type="text" id="sortInput" placeholder="64,34,25,12,22,11,90" value="64,34,25,12,22,11,90">
+                <button id="sortBtn">Ordenar</button>
+            </div>
+            <p>Original: <span id="original"></span></p>
+            <p>Ordenado: <span id="sorted"></span></p>
+        </section>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
